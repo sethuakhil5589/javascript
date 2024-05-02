@@ -74,5 +74,25 @@
                 document.write(car.teslaAutoPilot)
             </script>
         </div>
+        <div>
+            <h1>Objects with constructor</h1>
+            <script>
+                function car(car_name,car_brand,price){
+                    this.car_name=car_name
+                    this.car_brand=car_brand
+                    this.price=price
+                    this.autoPilot =function(){
+                        document.write("This car has auto pilot.");
+                    }
+                }
+
+               var car1= new  car("330i","BMW",50000);
+               document.write(car1.autoPilot )
+               document.write("\n "+car1.car_name)
+               document.write("\n "+car1.car_brand)
+               car1.price
+               car1.car_name
+            </script>
+        </div>
     </body>
 </html>
