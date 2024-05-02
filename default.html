@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>My title</title>
+        <script src="demo.js" type="text/javascript">
+            document.write("<h1>Hello World</h1>")
+        </script>
+    </head>
+
+    <body>
+        <div id="div1">
+            <h1>Basic Variables and combinations</h1>
+        <script type="text/javascript">
+            var name="Akhil";
+            var age=23;
+            document.write(name+" is "+age+" years old...");
+        </script>
+        </div>
+        <div id="div2">
+            <h1>Conditional Statements</h1>
+            <script>
+                var x=6;
+
+                if(x%2==0){
+                    document.write("Num is Even");
+                }
+                else{
+                    document.write("Num is Odd");
+                }
+
+            </script>
+        </div>
+        <div id="div3">
+            <h1>Functions</h1>
+            <script>
+                function addTwoNumbers(a,b){
+                
+                    document.write("Total is: "+(a+b));
+                }
+                addTwoNumbers(3,9);
+            </script>
+        </div>
+        <div id="id=div4">
+            <h1>Arrays</h1>
+            <script>
+                cars=["BMW","Audi","Volvo"]
+
+                cars.forEach(cars => {
+                    document.write(cars+" ");
+                });
+
+                fruitsArray = new Array("Apple","Mango","Guava");
+                fruitsArray.push("Grape");
+
+                fruitsArray.forEach(fruitsArray => {
+                    document.write(fruitsArray+", ")
+                })
+            </script>
+        </div>
+        <div id="div5">
+            <h1>Objects</h1>
+            <script>
+                var car={
+                    car_brand: "Tesla",
+                    car_model: "Model 3",
+                    price: 35000,
+                    teslaAutoPilot: function()
+                    {
+                         "Auto Pilot :" +true
+                    }
+                }
+                document.write(car.car_brand)
+                document.write(car.car_model)
+                document.write(car.price)
+                document.write(car.teslaAutoPilot)
+            </script>
+        </div>
+    </body>
+</html>
