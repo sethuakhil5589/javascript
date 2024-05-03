@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Basic Login</title>
+        <script>
+            function credsValidation(){
+                username="Akhil";
+                password="12345"
+                rb1 =document.getElementById("rb1");
+                rb2 =document.getElementById("rb2");
+                var userName=document.getElementById("userName").value;
+                var pass=document.getElementById("password").value;
+                var select=document.getElementById("timings");
+                var slot=select.options[select.selectedIndex].value;
+                if(userName==username && password==pass && rb1.checked){
+                    alert("Log-In Successful with course : "+rb1.value+"  "+slot);
+                }
+                else if((userName==username && password==pass) && rb2.checked){
+                    alert("Log-In Successful with course : "+rb2.value+"  "+slot);
+                }
+                else if((userName==username && password==pass)){
+                    alert("Log-In Successful with no course");
+                }
+                else
+                    alert("Invalid credentials");
+            }
+            
+        </script>
+    </head>
+    <body>
+        User Name:
+        <input id="userName" placeholder="username"> 
+        <br><br>
+        Password:
+        <input id="password" type="password" placeholder="password"> 
+        <br><br>
+        <input id="rb1" name="course" type="radio" value="Java">Java </input><br><br>
+        <input id="rb2" name="course" type="radio" value="Java Script">Java Script </input><br><br>
+        <select id="timings" >
+            <option value="morning slot">9:00 AM -11:00 AM</option>
+            <option value="Afternoon slot">12:00 PM -2:00 PM</option>
+            <option value="Evening slot">3:00 PM -5:00 PM</option>
+        </select><br><br>
+        <button onclick="credsValidation()">Login</button>
+        
+
+        
+    </body>
+</html>
