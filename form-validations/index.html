@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Index Page</title>
+        <script>
+           
+            function validate(){
+                var uname=document.getElementById("uname");
+                var pass=document.getElementById("pass");
+                var str="akhil";
+                if(uname.value.trim() =="" || pass.value.trim()==""){
+                    alert("Don't leave it blank")
+                    return false;
+                }
+                else{
+                   return true; 
+                }
+            }
+            
+            function validateform(){
+                var uname=document.getElementById("uname");
+                var pass=document.getElementById("pass");
+                if(uname.value.trim() =="" && pass.value.trim()==""){
+                    uname.style.border ="solid 3px red";
+                    pass.style.border ="solid 3px red";
+                    document.getElementById("unameLable").style.visibility="visible";
+                    document.getElementById("passLable").style.visibility="visible";
+                    return false;
+                }
+                else if(uname.value.trim()==""){
+                    uname.style.border ="solid 3px red";
+                    document.getElementById("unameLable").style.visibility="visible";
+                    return false;
+                }
+                else if(pass.value.trim()==""){
+                    pass.style.border ="solid 3px red";
+                    document.getElementById("passLable").style.visibility="visible";
+                    return false;
+                }
+                else if(pass.value.trim().length<5){
+                    pass.style.border ="solid 3px red";
+                    document.getElementById("passShortLable").style.visibility="visible";
+                    return false;
+                }
+                else
+                    return true;
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validateform()" action="welcome.html">
+            User Name:
+            <input id="uname" placeholder="username" type="uname">
+            <label id="unameLable" style="color: red; visibility: hidden;" >Invalid</label>
+            <br><br>
+            Password:
+            <input id="pass" placeholder="password" type="password">
+            <label id="passLable" style="color: red; visibility: hidden;" >Invalid</label>
+            <label id="passShortLable" style="color: red; visibility: hidden;" >Password too short</label>
+            <br><br>
+            <button  type="submit">submit</button>
+        </form>
+    </body>
+</html>

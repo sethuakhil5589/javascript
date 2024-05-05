@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Mouse-Over,Mouse-Out</title>
+        <script>
+            function changeToNewImg(){
+                document.getElementById("image").src ="/image/volvo.jpeg"
+            }
+            function changeToOldImg(){
+                document.getElementById("image").src="/image/bmw.jpeg"
+            }
+        </script>
+    </head>
+    <body>
+        <image id="image" src="/image/bmw.jpeg" onmouseover="changeToNewImg()" onmouseout="changeToOldImg()"></image>
+    </body>
+</html>

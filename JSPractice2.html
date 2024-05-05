@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>JS Practice-2</title>
+        <script>
+            function changeStyle(){
+                para=document.getElementsByTagName("p");
+                paraArray=Array.from(para);
+                para[0].style.color="red";
+                // paraArray.forEach(function(p){
+                //     p.style.color="red"
+                // });
+                paraArray.forEach(element => {
+                    element.style.fontStyle="italic"
+                });
+
+                }
+            function changeStyleWithClassName(){
+                para=document.getElementsByClassName("clsTag");
+                paraArray=Array.from(para);
+                paraArray.forEach(element => {
+                    element.style.color="orange";
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <p>This is Paragraph 1</p>
+        <p>This is Paragraph 2</p>
+        <p>This is Paragraph 3</p>
+        <p>This is Paragraph 4</p> 
+
+        <button onclick="changeStyle()">click Me</button>
+
+        <p class="clsTag">We are perfoming operation by getElementsByClassName-1</p>
+        <p class="clsTag">We are perfoming operation by getElementsByClassName-2</p>
+        <p>We are perfoming operation by getElementsByClassName-3</p>
+        <a href="#" class="clsTag">this is an anchor tag</a><br><br>
+
+        <button onclick="changeStyleWithClassName()">Click Me</button>
+    </body>
+</html>
