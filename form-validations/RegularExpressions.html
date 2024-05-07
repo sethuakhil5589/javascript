@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Regular Expressions</title>
+        <script>
+            function validate(){
+                var uname=document.getElementById("uname").value;
+                // regx = new RegExp("E00","i"); ->same as-> var regx =/E00/i
+                var regx=/[^a-p]00/ig;
+                if(regx.test(uname)){
+                    alert("Valid User");
+                }
+                    
+                else{
+                    alert("Invalid User");
+                    document.getElementById("invalidLable").style.visibility="visible";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input id="uname" placeholder="user name" type="text">
+        <label id="invalidLable" style="color: red; visibility: hidden;">Invalid User</label><br><br>
+        <button onclick="validate()" type="submit">submit</button>
+    </body>
+</html>

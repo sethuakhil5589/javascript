@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Email Validation</title>
+        <script>
+            function validate(){
+                var email=document.getElementById("email").value;
+                
+                var regx= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\.]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+                if(regx.test(email)){
+                    document.getElementById("validationLable").innerHTML="valid";
+                    document.getElementById("validationLable").style.color="green";
+                    document.getElementById("validationLable").style.visibility="visible";
+                }
+                    
+                else{
+                    document.getElementById("validationLable").innerHTML="Invalid";
+                    document.getElementById("validationLable").style.color="red";
+                    document.getElementById("validationLable").style.visibility="visible";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input id="email" placeholder="Email" type="text">
+        <label id="validationLable" style="color: red; visibility: hidden;">Invalid User</label><br><br>
+        <button onclick="validate()" type="submit">submit</button>
+        
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Mobile Number Validation</title>
+        <script>
+            function validate(){
+                var mobileNumber=document.getElementById("mnum").value;
+                // regx = new RegExp("E00","i"); ->same as-> var regx =/E00/i
+                // \d= match any digit.
+                // \w= match any word character (a-z, A-Z, 0-9, _)
+                // \s= match white space character (eg: spaces & tabs)
+                // \t= match a tab only 
+                // var regx=/^[7-9]\d{9}$/
+                var regx= /^[5-9][a-z]{8}0$/;
+                if(regx.test(mobileNumber)){
+                    document.getElementById("validationLable").innerHTML="valid";
+                    document.getElementById("validationLable").style.color="green";
+                    document.getElementById("validationLable").style.visibility="visible";
+                }
+                    
+                else{
+                    document.getElementById("validationLable").innerHTML="Invalid";
+                    document.getElementById("validationLable").style.color="red";
+                    document.getElementById("validationLable").style.visibility="visible";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input id="mnum" placeholder="mobile Number" type="text">
+        <label id="validationLable" style="color: red; visibility: hidden;">Invalid User</label><br><br>
+        <button onclick="validate()" type="submit">submit</button>
+        
+    </body>
+</html>
