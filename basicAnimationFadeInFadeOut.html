@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Timing function</title>
+        <script>
+            opacity=0;
+            id=0;
+            function fadeOut(){
+                id=window.setInterval(hide,200);
+            }
+            function fadeIn(){
+                id=window.setInterval(show,200);
+            }
+            function show(){
+                img=document.getElementById("img");
+                opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+                if(opacity<1){
+                    opacity=opacity+0.1;
+                    img.style.opacity=opacity;
+                }
+                else{
+                    window.clearInterval(id);
+                }
+
+            }
+            function hide(){
+                 img=document.getElementById("img");
+                opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+                if(opacity>0){
+                    opacity=opacity-0.1;
+                    img.style.opacity=opacity;
+                }
+                else{
+                    window.clearInterval(id);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button id="fadeIn" onclick="fadeIn()">FADE IN</button><br>
+        <img id="img" src="image/bmw.jpeg"></img><br>
+        <button id="fadeOut" onclick="fadeOut()">FADE OUT</button>
+    </body>
+</html>

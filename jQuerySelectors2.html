@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>JQuery Selectors-2</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+       <div id="div1" class="mydivs">
+        <h2>This is first paragraph in div 1</h2>
+        <h2>This is second paragraph in div 1</h2>
+        <h2>This is third paragraph in div 1</h2>
+       </div>
+       <div id="div2" class="mydivs">
+        <h2>This is fourth paragraph in div 2</h2>
+        <h2>This is fifth paragraph in div 2</h2>
+       </div>
+       <div id="div3" class="mydivs">
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li> 
+            <li>List item 3</li>
+            <li>List item 4</li>    
+        </ul>
+       </div>
+       <button onclick="fun1()" >click me</button>
+    </body>
+    <script src="jQuery/jquery.js"></script>
+    <script>
+        function fun1(){
+            $("#div3 ul li:first").fadeToggle();
+        }
+    </script>
+</html>

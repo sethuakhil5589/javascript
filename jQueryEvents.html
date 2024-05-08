@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>JQuery Events</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="div1" class="mydivs">
+        <h2>This is first paragraph in div 1</h2>
+        <h2>This is second paragraph in div 1</h2>
+        <h2>This is third paragraph in div 1</h2>
+    </div>
+    <div id="div2" class="mydivs">
+        <h2>This is fourth paragraph in div 2</h2>
+        <h2>This is fifth paragraph in div 2</h2>
+    </div>
+    <div id="div3" class="mydivs">
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </div>
+    <div id="div4">
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </div>
+    <button id="btn1">click me</button>
+</body>
+<script src="jQuery/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#btn1").click(fun1);
+
+        function fun1() {
+            $("#div1 h2").fadeToggle();
+        }
+
+    });
+
+
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Scaling function</title>
+        <script>
+            id=0;
+            width=200;
+            function increase(){
+                window.clearInterval(id);
+                id=window.setInterval(expand,20);
+                console.log("In increase method")
+            }
+            function decrease(){
+                window.clearInterval(id);
+                id=window.setInterval(shrink,20);
+            }
+            function shrink(){
+                if(width>200){
+                    width=width-2;
+                    document.getElementById("img").style.width=width;
+                    console.log(width);
+                }
+                else{
+                    window.clearInterval(id);
+                }
+            }
+            function expand(){
+                
+                if(width<300){
+                    width=width+2;
+                    document.getElementById("img").style.width=width;
+                    console.log(width);
+                }
+                else{
+                    window.clearInterval(id);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <img id="img" src="image/bmw.jpeg" width="200" onmouseover="increase()" onmouseout="decrease()"></img><br>
+        
+    </body>
+</html>

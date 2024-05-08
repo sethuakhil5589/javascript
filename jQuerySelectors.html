@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Intro to JQuery</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <h1 id="firstH1">This is the first line</h1>
+        <h1 id="secondH1" class="lines">This is the second line</h1>
+        <h1 id="thirdH1" class="lines">This is the third line</h1>
+        <button onclick="anime()">click me</button>
+    </body>
+    <script src="jQuery/jquery.js"></script>
+    <script>
+        function anime(){
+            $("#secondH1").fadeToggle();
+            // $(".lines").fadeOut();
+        }
+    </script>
+</html>

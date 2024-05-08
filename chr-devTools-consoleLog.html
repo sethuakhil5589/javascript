@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Debugging and console.log</title>
+        <script>
+            function add(){
+                var a=document.getElementById("a").value;
+                var b=document.getElementById("b").value;
+                var result=a+b;
+                document.getElementById("result").innerHTML="Result= "+result;
+                console.log(a+b);
+            }
+        </script>
+    </head>
+    <body>
+        <input id="a" placeholder="a" type="text"><br><br>
+        <input id="b" placeholder="b" type="text"><br><br>
+        
+        <button onclick="add()" type="submit">submit</button>
+        <h1 id="result"></h1>
+    </body>
+</html>

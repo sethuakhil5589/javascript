@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Timing function</title>
+        <script>
+            var id=0;
+            var seconds=0;
+            // function printmsg(){
+            //     document.getElementById("text").innerHTML="5 seconds passed"
+            // }
+            // function start(){
+            //     id=window.setTimeout(printmsg,5000);
+            // }
+            // function stop(){
+            //     window.clearTimeout(id);
+            // }
+
+            function printmsg(){
+                document.getElementById("text").innerHTML=seconds+" seconds passed";
+                seconds++;
+            }
+            function start(){
+                id=window.setInterval(printmsg,1000);
+            }
+            function stop(){
+                window.clearInterval(id);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <button id="start" onclick="start()">START</button><br>
+        <h1 id="text">Start the Timer</h1><br>
+        <button id="stop" onclick="stop()">STOP</button>
+    </body>
+</html>
