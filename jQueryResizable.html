@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>JQuery Resizable</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.theme.css">
+</head>
+
+<body>
+   <div>
+    <h2>Resizable Interaction</h2>
+    <img src="image/bmw.jpeg" id="bmw">
+   </div>
+</body>
+<script src="jQuery/jquery.js"></script>
+<script src="jQueryUI/jquery-ui-1.13.3/jquery-ui.js"></script>
+<script>
+    $("#bmw").resizable({
+        autoHide:true,
+        ghost:true,
+        aspectRatio:true
+    });
+</script>
+
+</html>

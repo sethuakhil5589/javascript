@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>JQuery DOM manuplations</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <button id="btn">Action</button>
+    <div id="div1" class="mydivs">
+        <h2 id="line1">This is <i>first</i> <b>paragraph</b> in div 1</h2>
+        <h2 id="line2">This is second paragraph in div 1</h2>
+        <h2 id="line3">This is third paragraph in div 1</h2>
+    </div>
+    
+    
+</body>
+<script src="jQuery/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#btn").click(function(){
+            // alert($("#line1").text());
+            // $("#line1").text("Hello World");
+            // alert($("#line1").html());
+            // alert($("#line1").attr("id"));
+            alert($("#line1").css("font-size"))
+
+        });
+        
+    });
+
+
+
+</script>
+
+</html>

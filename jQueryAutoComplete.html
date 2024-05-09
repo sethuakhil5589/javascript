@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>JQuery Autocomplete</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.theme.css">
+</head>
+
+<body>
+    <div id="mydiv">
+        <h1>AutoComplete</h1><br>
+        <h3>Enter the city:</h3>
+        <input id="city" placeholder="Enter the city">
+    </div>
+    
+</body>
+<script src="jQuery/jquery.js"></script>
+<script src="jQueryUI/jquery-ui-1.13.3/jquery-ui.js"></script>
+<script>
+    var cites= ["mumbai","Hyderabad","Kolkata","New Delhi","New York City","Jersey city","Wilmington"]
+    $("#city").autocomplete({
+        source: cites
+    },{
+        autoFocus:true,
+        minLength:1
+    });
+</script>
+
+</html>

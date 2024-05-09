@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>JQuery DOM manuplations 4</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <button id="btn1">Add Class</button>
+    <button id="btn2">Remove Class</button>
+    <button id="btn3">Toggle Class</button>
+    <button id="btn4">CSS</button>
+    <br><br>
+    <div id="div1" class="mydivs">
+        <h2 id="line1" class="Class1">This is <i>first</i> <b>paragraph</b> in div 1</h2>
+        <h2 id="line2">This is second paragraph in div 1</h2>
+        <h2 id="line3">This is third paragraph in div 1</h2>
+    </div>
+    
+    
+</body>
+<script src="jQuery/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+       $("#btn1").click(function(){
+        $("#div1").addClass("addclass");
+        $("#line1").addClass("addPara");
+       });
+       $("#btn2").click(function(){
+        $("#div1").removeClass("addclass");
+        $("#line1").removeClass("addPara");
+       });
+       $("#btn3").click(function(){
+        $("#div1").toggleClass("addclass");
+        $("#line1").toggleClass("addPara");
+       });
+
+    });
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>JQuery DOM manuplations 3</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <button id="btn1">Append</button>
+    <button id="btn2">Prepend</button>
+    <button id="btn3">After</button>
+    <button id="btn4">Before</button>
+    <button id="btn5">Remove</button>
+    <button id="btn6">Empty</button><br><br>
+    <div id="div1" class="mydivs">
+        <h2 id="line1" class="Class1">This is <i>first</i> <b>paragraph</b> in div 1</h2>
+        <h2 id="line2">This is second paragraph in div 1</h2>
+        <h2 id="line3">This is third paragraph in div 1</h2>
+    </div>
+    
+    
+</body>
+<script src="jQuery/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+       $("#btn1").click(function(){
+        $("#div1").append("This is the Appended Line")
+       });
+       $("#btn2").click(function(){
+        $("#div1").prepend("This is the Prepended Line")
+       });
+       $("#btn3").click(function(){
+        $("#div1").after("This is the After Line")
+       });
+       $("#btn4").click(function(){
+        $("#div1").before("This is the Before Line")
+       });
+       $("#btn5").click(function(){
+        $("#div1").remove()
+       });
+       $("#btn6").click(function(){
+        $("#div1").empty()
+       });
+    });
+
+
+
+</script>
+
+</html>

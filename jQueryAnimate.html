@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>JQuery Animations</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+    <button id="btn3">Toggle</button>
+    <div id="div1" class="mydivs">
+        <h2>This is first paragraph in div 1</h2>
+        <h2>This is second paragraph in div 1</h2>
+        <h2>This is third paragraph in div 1</h2>
+    </div>
+    <div id="div2" class="mydivs">
+        <h2>This is fourth paragraph in div 2</h2>
+        <h2>This is fifth paragraph in div 2</h2>
+    </div>
+    <div id="div3" class="mydivs">
+        <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+        </ul>
+    </div>
+    <div id="div4" class="cube">
+        <p3>CUBE</p3>
+    </div>
+    
+</body>
+<script src="jQuery/jquery.js"></script>
+<script>
+    $(document).ready(function() {
+        // $("#btn1").click(function(){
+        //     $("#div1").hide();
+        // });
+        // $("#btn2").click(function(){
+        //     $("#div1").show();
+        // });
+        // $("#btn3").click(function(){
+        //     $("#div1").toggle();
+        // });
+
+        $("#btn1").click(function(){
+            $("#div1").slideUp();
+        });
+        $("#btn2").click(function(){
+            $("#div1").slideDown();
+        });
+        $("#btn3").click(function(){
+            $("#div1").slideToggle();
+        });
+
+        $("#btn3").click(function(){
+            $("#div4").animate({
+                left:'150px',
+                opacity: '1',
+                width:'100px',
+                height: '100px'
+            },2000,)
+        });
+    });
+
+
+
+</script>
+
+</html>

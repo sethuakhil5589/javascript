@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>JQuery Message Box</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.theme.css">
+</head>
+
+<body>
+    <div id="mydiv">
+        <h1>Message Box</h1>
+        <button id="btn1">Click me for the message Box</button>
+        
+    </div>
+    <div id="messagebox" title="">
+        <h3>This is a sample title</h3>
+        <img src="image/bmw.jpeg" id="bmw" title="BMW"><br>
+        <button id="btn2">Click Me</button>
+    </div>
+</body>
+<script src="jQuery/jquery.js"></script>
+<script src="jQueryUI/jquery-ui-1.13.3/jquery-ui.js"></script>
+<script>
+    $("#btn1").click(function(){
+        $("#messagebox").dialog({
+            title:"custom message box",
+            draggable:false,
+            modal:true,
+            height:300,
+            width:300
+        });
+    });
+</script>
+
+</html>

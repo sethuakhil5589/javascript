@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>JQuery sortable</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.theme.css">
+</head>
+
+<body>
+    <div id="divs">
+
+    
+    <div class="cube">
+        <h3>
+            Cube1
+        </h3>
+    </div>
+    <div class="cube">
+        <h3>
+            Cube2
+        </h3>
+    </div>
+    <div class="cube">
+        <h3>
+            Cube3
+        </h3>
+    </div>
+    <div class="cube">
+        <h3>
+            Cube4
+        </h3>
+    </div>
+
+</div>
+</body>
+<script src="jQuery/jquery.js"></script>
+<script src="jQueryUI/jquery-ui-1.13.3/jquery-ui.js"></script>
+<script>
+    $("#divs").sortable({
+        opacity:1,
+        distance: 10,
+        cursor:"grabbing"
+    });
+</script>
+
+</html>

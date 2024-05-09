@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>JQuery UI 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.theme.css">
+</head>
+
+<body>
+    <div id="mydiv">
+        <h1>Introduction to jQuery UI</h1>
+        <img src="image/bmw.jpeg" id="bmw" title="BMW">
+    </div>
+</body>
+<script src="jQuery/jquery.js"></script>
+<script src="jQueryUI/jquery-ui-1.13.3/jquery-ui.js"></script>
+<script>
+    $("img").tooltip({
+        track:true,
+        content:"BMW is the best",
+        show:{effect:"blind",duration:3000},
+        hide:{effect:"explode",duration:3000}
+    });
+</script>
+
+</html>
