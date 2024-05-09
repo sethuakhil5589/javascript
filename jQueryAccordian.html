@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>JQuery Accordion</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jQueryUI/jquery-ui-1.13.3/jquery-ui.theme.css">
+</head>
+
+<body>
+    <h1>Accordion Example</h1>
+    <div id="mydiv">
+        <h3>Sethu Akhil</h3>
+        <p>Sethu Akhil is a Good Boy, Who is actively seeking opportunites in Tech</p>
+        <h3>Wilmington university</h3>
+        <p>This is his university</p>
+        <h3>Delaware</h3>
+        <p>He lives in Delaware</p>
+    </div>
+</body>
+<script src="jQuery/jquery.js"></script>
+<script src="jQueryUI/jquery-ui-1.13.3/jquery-ui.js"></script>
+<script>
+    $("#mydiv").accordion({
+        collapsible:true,
+        animate: 200,
+        event:"click",
+        active: 1,
+        heightStyle:true
+    });
+</script>
+
+</html>
